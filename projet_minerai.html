@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Projet | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+<div class="sidebar">
+    <div class="profile-section">
+        <div class="profile-image">
+            <img src="images/photo_profil.png" alt="Photo de Ethan DEGLOS BIZOUARN">
+        </div>
+        <h1>Ethan DEGLOS BIZOUARN</h1>
+    </div>
+
+    <div class="nav-links">
+        <a href="main.html" class="nav-button">
+            <i class="fas fa-home"></i> Accueil
+        </a>
+        <a href="projets.html" class="nav-button">
+            <i class="fas fa-project-diagram"></i> Projets
+        </a>
+        <a href="veille.html" class="nav-button">
+            <i class="fas fa-binoculars"></i> Veille technologique - Patrimoine informatique
+        </a>
+        <a href="documents.html" class="nav-button">
+            <i class="fas fa-folder"></i> Documents
+        </a>
+        <a href="contact.html" class="nav-button">
+            <i class="fas fa-envelope"></i> Contact
+        </a>
+    </div>
+
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-button">
+            <i class="fas fa-sun"></i> Mode clair
+        </button>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/ethan-deglos-705b12292" target="_blank" class="social-button">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Sopsz?tab=repositories" target="_blank" class="social-button">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</div>
+
+<div class="content">
+    <div class="header">
+        <h1>Site Minerai</h1>
+        <p>Application Web Fullstack</p>
+    </div>
+
+    <div class="project-detail-container">
+        <div class="project-info-section">
+            <h2><i class="fas fa-info-circle"></i> Description du projet</h2>
+            <p>Cette application web permet de créer, lire, modifier et supprimer des données modélisées par des minerais fictifs.</p>
+
+            <h2><i class="fas fa-list-alt"></i> Caractéristiques</h2>
+            <div class="features-table-container">
+                <table class="features-table">
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Détails</th>
+                    </tr>
+                    <tr>
+                        <td>Technologies</td>
+                        <td>Laravel, Tailwind, MySQL</td>
+                    </tr>
+                    <tr>
+                        <td>Durée</td>
+                        <td>1 semaine (2023)</td>
+                    </tr>
+                    <tr>
+                        <td>Fonctionnalités clés</td>
+                        <td>
+                            <ul>
+                                <li>Créer, lire, modifier et supprimer des minerais</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Difficultés rencontrées</td>
+                        <td>
+                            <ul>
+                                <li>Première interaction avec Laravel et Tailwind</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Compétences acquises</td>
+                        <td>
+                            <ul>
+                                <li>Apprendre à créer un CRUD avec Laravel et maîtriser ses fonctionnalités de base</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="project-image-section">
+            <img src="images/image_minerai.png" alt="Capture d'écran de l'application" class="project-main-image">
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+
+        const icon = this.querySelector('i');
+        if (document.body.classList.contains('light-mode')) {
+            this.innerHTML = '<i class="fas fa-moon"></i> Mode sombre';
+        } else {
+            this.innerHTML = '<i class="fas fa-sun"></i> Mode clair';
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio/Projets</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lien pour les icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+<div class="sidebar">
+    <div class="profile-section">
+        <div class="profile-image">
+            <img src="images/photo_profil.png" alt="Photo de Ethan DEGLOS BIZOUARN">
+        </div>
+        <h1>Ethan DEGLOS BIZOUARN</h1>
+    </div>
+
+    <div class="nav-links">
+        <a href="main.html" class="nav-button">
+            <i class="fas fa-home"></i> Accueil
+        </a>
+        <a href="projets.html" class="nav-button active-btn">
+            <i class="fas fa-project-diagram"></i> Projets
+        </a>
+        <a href="veille.html" class="nav-button">
+            <i class="fas fa-binoculars"></i> Veille Technologique Patrimoine Informatique
+        </a>
+        <a href="documents.html" class="nav-button">
+            <i class="fas fa-folder"></i> Documents
+        </a>
+        <a href="contact.html" class="nav-button">
+            <i class="fas fa-envelope"></i> Contact
+        </a>
+    </div>
+
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-button">
+            <i class="fas fa-sun"></i> Mode clair
+        </button>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/ethan-deglos-705b12292" target="_blank" class="social-button">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Sopsz?tab=repositories" target="_blank" class="social-button">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</div>
+
+<div class="content">
+    <div class="header">
+        <h1>Mes Projets</h1>
+        <p>Découvrez mes réalisations et travaux récents</p>
+    </div>
+
+    <div class="projects-grid">
+        <!-- Projet 1 -->
+        <a href="projet_transport.html" class="project-card">
+            <div class="project-icon">
+                <img src="images/bus_logo.png" alt="bus_logo" class="logo_style">
+            </div>
+            <h3>Site transport</h3>
+            <p>Développement d'une application web en Laravel</p>
+            <span class="project-link">Voir plus <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Projet 2 -->
+        <a href="projet_lua.html" class="project-card">
+            <div class="project-icon">
+                <img src="images/wow_logo.png" alt="wow_logo" class="logo_style">
+            </div>
+            <h3>Addon WoW</h3>
+            <p>Création d'un addon permettant de selectionner des profils en lua.</p>
+            <span class="project-link">Voir plus <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Projet 3 -->
+        <a href="projet_rpg_sim.html" class="project-card">
+            <div class="project-icon">
+                <img src="images/epee_logo.png" alt="epee_logo" class="logo_style">
+            </div>
+            <h3>RPG SIM</h3>
+            <p>Mini jeux rpg de combat tour par tour en java</p>
+            <span class="project-link">Voir plus <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Projet 4 -->
+        <a href="projet_roulette.html" class="project-card">
+            <div class="project-icon">
+                <img src="images/roulette.png" alt="roulette_logo" class="logo_style">
+            </div>
+            <h3>Site Roulette</h3>
+            <p>Simulation de jeux de hasard</p>
+            <span class="project-link">Voir plus <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Projet 5 -->
+        <a href="projet_minerai.html" class="project-card">
+            <div class="project-icon">
+                <img src="images/minerai.png" alt="minerai_logo" class="logo_style">
+            </div>
+            <h3>Site Minerai</h3>
+            <p>Manipulation de données</p>
+            <span class="project-link">Voir plus <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Projet 6 -->
+        <a href="projet_joomla.html" class="project-card">
+            <div class="project-icon">
+                <img src="images/vanoplie_logo.png" alt="vanoplie_logo" class="logo_style">
+            </div>
+            <h3>Site Vanoplie</h3>
+            <p>Création du site de l'entreprise</p>
+            <span class="project-link">Voir plus <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+    </div>
+</div>
+
+<script>
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+
+        // Mettre à jour le texte et l'icône du bouton
+        const icon = this.querySelector('i');
+        if (document.body.classList.contains('light-mode')) {
+            this.innerHTML = '<i class="fas fa-moon"></i> Mode sombre';
+        } else {
+            this.innerHTML = '<i class="fas fa-sun"></i> Mode clair';
+        }
+    });
+</script>
+</body>
+</html>
